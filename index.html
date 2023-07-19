@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <header>
@@ -22,10 +23,10 @@
             </div>
             <div class="form">
                 <label for="iemail" id="email-l">Email</label>
-                <input type="email" name="email" id="iemail" autocomplete="email" required>
+                <input type="email" name="email" id="iemail" class="caixa-texto" autocomplete="email" required>
             </div>
             <div class="form">
-                <p>Sexo</p>
+                <p id="sex">Sexo</p>
                 <label for="mas">
                     <input type="radio" name="sexo" id="mas" class="radios">
                     Masculino
