@@ -12,18 +12,22 @@
         <h1>Formulário de pesquisa</h1>
     </header>
     <div class="container">
-        <form action="form.php" autocomplete="on">
+        <form action="form.php" autocomplete="on" method="post">
             <div class="form">
                 <label for="inome" id="nome-l">Nome</label>
-                <input type="text" name="nome" id="inome" class="caixa-texto" autocomplete="name" required>
+                <input type="text" name="nome" id="inome" class="caixa-texto" autocomplete="name" required placeholder="Nome completo">
             </div>
             <div class="form">
                 <label for="iidade" id="idade-l">Idade</label>
-                <input type="number" name="idade" id="iidade" class="caixa-texto" min="8">
+                <input type="number" name="idade" id="iidade" class="caixa-texto" min="8" placeholder="Opcional">
             </div>
             <div class="form">
                 <label for="iemail" id="email-l">Email</label>
-                <input type="email" name="email" id="iemail" class="caixa-texto" autocomplete="email" required>
+                <input type="email" name="email" id="iemail" class="caixa-texto" autocomplete="email" required placeholder="Coloque um email válido">
+            </div>
+            <div class="form">
+                <label for="icel">Número de celular</label>
+                <input type="tel" name="cel" id="icel" class="caixa-texto" placeholder="(xx) xxxxx-xxxx">
             </div>
             <div class="form">
                 <p id="sex">Sexo</p>
@@ -51,12 +55,8 @@
                 </select>
             </div>
             <div class="form">
-                <label for="icor" id="cor-l">Cor favorita</label>
-                <input type="color" name="cor" id="icor">
-            </div>
-            <div class="form">
                 <p>Qual o seu jogo favorito?</p>
-                <input type="text" name="jogo" id="ijogo" class="caixa-texto" list="ljogo">
+                <input type="text" name="jogo" id="ijogo" class="caixa-texto" list="ljogo" placeholder="Adicione um novo se quiser">
                 <datalist id="ljogo">
                     <option value="Call of Duty"></option>
                     <option value="Sea of Thieves"></option>
@@ -91,19 +91,23 @@
             </div>
             <div class="form">
                 <p>Satisfação</p>
-                <input type="range" name="sas" id="isas" min="0" max="10">
+                <input type="range" name="sas" id="isas" class="sas" min="0" max="10" oninput="ival.innerHTML = Number(isas.value)"> 
+                <output id="ival" class="out-sas">5</output>
             </div>
             <div class="form">
                 <p>Comentário ou sugestão?</p>
                 <textarea name="com" id="icom" cols="30" rows="10" class="textarea"></textarea>
             </div>
             <div class="form">
-                <input type="submit" value="Enviar" class="enviar">
+                <input type="reset" value="Limpar" class="botao">
+            </div>
+            <div class="form">
+                <input type="submit" value="Enviar" class="botao">
             </div>
         </form>
     </div>
     <footer>
-        <p>Site criapo por <a href="https://github.com/luis-sfurlan" target="_blank" rel="external">Luís Fernando Schimidt Furlan</a>.</p>
+        <p>Site criado por <a href="https://github.com/luis-sfurlan" target="_blank" rel="external">Luís Fernando Schimidt Furlan</a>.</p>
     </footer>
 </body>
 </html>
