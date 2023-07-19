@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário de pesquisa</h1>
+    </header>
+    <div class="container">
+        <form action="form.php" autocomplete="on">
+            <div class="form">
+                <label for="inome" id="nome-l">Nome</label>
+                <input type="text" name="nome" id="inome" class="caixa-texto" autocomplete="name" required>
+            </div>
+            <div class="form">
+                <label for="iidade" id="idade-l">Idade</label>
+                <input type="number" name="idade" id="iidade" class="caixa-texto" min="8">
+            </div>
+            <div class="form">
+                <label for="iemail" id="email-l">Email</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </div>
+            <div class="form">
+                <p>Sexo</p>
+                <label for="mas">
+                    <input type="radio" name="sexo" id="mas" class="radios">
+                    Masculino
+                </label>
+                <label for="fem">
+                    <input type="radio" name="sexo" id="fem" class="radios">
+                    Feminino
+                </label>
+            </div>
+            <div class="form">
+                <p>Qual sua marca de carro favorita?</p>
+                <select name="carro" id="icarro" class="caixa-texto">
+                    <option value="" disabled selected>Escolha uma marca</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Audi">Audi</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="icor" id="cor-l">Cor favorita</label>
+                <input type="color" name="cor" id="icor">
+            </div>
+            <div class="form">
+                <p>Qual o seu jogo favorito?</p>
+                <input type="text" name="jogo" id="ijogo" class="caixa-texto" list="ljogo">
+                <datalist id="ljogo">
+                    <option value="Call of Duty"></option>
+                    <option value="Sea of Thieves"></option>
+                    <option value="Elden Ring"></option>
+                    <option value="Valorant"></option>
+                    <option value="Red Dead Redemption 2"></option>
+                    <option value="Dark Souls 3"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <p>Esporte favorito</p>
+                <label for="ibas">
+                    <input type="checkbox" name="bas" id="ibas" class="checkbox">
+                    Basquete
+                </label>
+                <label for="ifut">
+                    <input type="checkbox" name="fut" id="ifut" class="checkbox">
+                    Futebol
+                </label>
+                <label for="itenis">
+                    <input type="checkbox" name="tenis" id="itenis" class="checkbox">
+                    Tênis
+                </label>
+                <label for="ivol">
+                    <input type="checkbox" name="vol" id="ivol" class="checkbox">
+                    Vôlei
+                </label>
+                <label for="inat">
+                    <input type="checkbox" name="nat" id="inat" class="checkbox">
+                    Natação
+                </label>
+            </div>
+            <div class="form">
+                <p>Satisfação</p>
+                <input type="range" name="sas" id="isas" min="0" max="10">
+            </div>
+            <div class="form">
+                <p>Comentário ou sugestão?</p>
+                <textarea name="com" id="icom" cols="30" rows="10" class="textarea"></textarea>
+            </div>
+            <div class="form">
+                <input type="submit" value="Enviar" class="enviar">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Site criapo por <a href="https://github.com/luis-sfurlan" target="_blank" rel="external">Luís Fernando Schimidt Furlan</a>.</p>
+    </footer>
+</body>
+</html>
